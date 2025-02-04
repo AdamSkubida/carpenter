@@ -48,6 +48,31 @@ export const Header = () => {
               </Link>
             </ul>
           </nav>
+          {isOpen && (
+            <div className={css.overlay}>
+              <button
+                className={css["btn-close"]}
+                onClick={() => setIsOpen(false)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 -960 960 960"
+                  className={css.close}
+                >
+                  <path d="m338-288-50-50 141-142-141-141 50-50 142 141 141-141 50 50-141 141 141 142-50 50-141-141-142 141Z" />
+                </svg>
+              </button>
+              <nav className={css["mobile-nav"]}>
+                <ul className={css["mobile-list"]}>
+                  <li className={css["mobile-item"]}>USŁUGI</li>
+                  <li className={css["mobile-item"]}>GALERIA</li>
+                  <li className={css["mobile-item"]}>KONTAKT</li>
+                </ul>
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </>
