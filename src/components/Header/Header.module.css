@@ -11,6 +11,23 @@
   justify-content: space-around;
 }
 
+.btn-burger {
+  border: none;
+  background-color: #fff;
+}
+
+@media (min-width: 769px) {
+  .btn-burger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+
 .list {
   display: flex;
   align-items: center;
