@@ -1,0 +1,20 @@
+.reveal-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.bg-image {
+  position: relative;
+  height: 50vh;
+  background-image: url("/carpenter/wooden-bg4015x3011.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
