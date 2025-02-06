@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 
-const Offer = () => {
+const About = () => {
   return (
     <>
       <Header />
@@ -8,4 +8,4 @@ const Offer = () => {
   );
 };
 
-export default Offer;
+export default About;

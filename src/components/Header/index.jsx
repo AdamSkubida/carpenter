@@ -42,13 +42,13 @@ export const Header = () => {
           </button>
           <nav className={css.navigation}>
             <ul className={css.list}>
-              <Link to="/offer">
+              <Link to="/about">
                 <li
                   className={`${css.item} ${
-                    location.pathname === "/offer" ? css.highlight : ""
+                    location.pathname === "/about" ? css.highlight : ""
                   }`}
                 >
-                  USŁUGI
+                  O NAS
                   <img
                     src="/carpenter/svg/leaf.svg"
                     className={css.leaf}
@@ -109,13 +109,13 @@ export const Header = () => {
                   isOpen ? css.show : css.hide
                 }`}
               >
-                <Link to="/offer">
+                <Link to="/about">
                   <li
                     className={`${css["mobile-item"]} ${
-                      location.pathname === "/offer" ? css.highlight : ""
+                      location.pathname === "/about" ? css.highlight : ""
                     }`}
                   >
-                    USŁUGI
+                    O NAS
                   </li>
                 </Link>
                 <Link to="/">
