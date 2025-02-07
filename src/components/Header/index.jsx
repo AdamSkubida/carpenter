@@ -4,7 +4,24 @@ import { useState, useEffect } from "react";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      setIsFirstVisit(true);
+
+      setTimeout(() => {
+        setShowHeader(true);
+        localStorage.setItem("hasVisited", "true");
+      }, 2000);
+    } else {
+      setShowHeader(true);
+    }
+  }, []);
 
   useEffect(() => {
     console.log(isOpen);
@@ -12,7 +29,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className={css.header}>
+      <div className={`${css.header} ${showHeader ? css.visible : ""}`}>
         <div className={css.wrapper}>
           <Link to="/">
             <div className={css.logo}>
