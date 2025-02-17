@@ -13,6 +13,10 @@
   position: absolute;
 }
 
+.header:not(.animate) {
+  transition: none;
+}
+
 .wrapper {
   margin: auto;
   max-width: 1280px;

@@ -9,14 +9,14 @@ export const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
+    const hasVisited = sessionStorage.getItem("hasVisited");
 
     if (!hasVisited) {
       setIsFirstVisit(true);
 
       setTimeout(() => {
         setShowHeader(true);
-        localStorage.setItem("hasVisited", "true");
+        sessionStorage.setItem("hasVisited", "true");
       }, 2000);
     } else {
       setShowHeader(true);
@@ -29,7 +29,11 @@ export const Header = () => {
 
   return (
     <>
-      <div className={`${css.header} ${showHeader ? css.visible : ""}`}>
+      <div
+        className={`${css.header} ${showHeader ? css.visible : ""} ${
+          isFirstVisit ? css.animate : ""
+        }`}
+      >
         <div className={css.wrapper}>
           <Link to="/">
             <div className={css.logo}>
