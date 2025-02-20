@@ -17,6 +17,7 @@
 
 @media (max-width: 768px) {
   .hero {
+    background-image: url("/carpenter/hero-mobile.jpg");
     background-attachment: scroll;
   }
 }
