@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: black;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -47,25 +46,56 @@
   }
 }
 
+.offer-item:nth-child(1) {
+  background-image: url("/carpenter/desk.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offer-item:nth-child(2) {
+  background-image: url("/carpenter/kitchen.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offer-item:nth-child(3) {
+  background-image: url("/carpenter/door.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offer-item:nth-child(4) {
+  background-image: url("/carpenter/wardrobe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .offer-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: end;
   gap: 30px;
 
   flex: 1 1 calc((100% - 80px) / 2);
   width: 350px;
   height: 350px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #d6b17eb6;
-  transition: box-shadow 200ms ease-in-out;
+  box-shadow: 5px 5px 10px -5px rgba(66, 68, 90, 0.8);
+
+  transition: opacity 250ms ease-in-out;
 }
 
 .offer-item:hover,
 .offer-item:focus {
   cursor: pointer;
-  box-shadow: 4px 4px 10px 0px rgba(66, 68, 90, 1);
+
+  opacity: 0.8;
 }
 
 @media (max-width: 1240px) {
@@ -91,8 +121,16 @@
 }
 
 .item-topic {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
   font-family: var(--primary-font);
   font-weight: 500;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px #000000;
+  margin: 0 0 10px 10px;
 }
 
 .bg-image {
@@ -101,7 +139,7 @@
   background-image: url("/carpenter/wooden-bg4015x3011.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 @media (max-width: 768px) {

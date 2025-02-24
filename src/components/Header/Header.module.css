@@ -34,6 +34,7 @@
   font-family: var(--heading-font);
   font-weight: 700;
   font-size: 30px;
+  color: var(--font-color);
 }
 
 @media (max-width: 425px) {
