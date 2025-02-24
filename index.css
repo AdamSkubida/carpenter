@@ -11,8 +11,8 @@
   --border-color: #eaeaea;
 
   /* FONTS */
-  --primary-font: "Inter", serif;
-  --heading-font: "Montserrat", serif;
+  --heading-font: "Inter", serif;
+  --primary-font: "Montserrat", serif;
 }
 
 * {
